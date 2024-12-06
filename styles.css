@@ -3,7 +3,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f9;
+    background-image: url('images/parking.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the image */
     margin: 0;
 }
 
@@ -28,17 +30,88 @@ body {
 }
 
 .slot.empty {
-    background-color: rgba(0, 255, 13, 0.1); /* Transparent red */
+    background-color: rgba(0, 255, 13, 0.1); /* Transparent green */
     font-size: 24px;
     font-weight: bold;
 }
+
 .slot {
     margin: 5px;
     padding: 10px;
-  }
-  
-  .booked {
+}
+
+.booked {
     background-color: rgba(255, 255, 0, 0.329); /* Transparent yellow */
     font-size: 24px;
     font-weight: bold;
-  }
+}
+
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    
+   /* Hide nav links and show hamburger menu on small screens */
+   .nav-links {
+       display: none; /* Hidden by default */
+       flex-direction: column; /* Stack items vertically */
+       position: absolute; /* Position relative to navbar */
+       top: 60px; /* Below navbar */
+       right: 10px; /* Align to right side */
+       background-color:#333 ;
+       
+       
+   }
+}
